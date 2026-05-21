@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+:root {
+  --color-primary: #0ef;
+  --color-secondary: #071b27;
+}
+
+body {
+  @apply bg-slate-900 text-gray-200;
+}
+
+/* Keep original animations and styles */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.logo {
+  animation: slideRight 1s ease forwards;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.navbar a {
+  animation: slideTop 1s ease forwards;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #0ef;
+}
+
+/* Button styles */
+.btn-box {
+  @apply px-4 py-2 bg-cyan-400 text-slate-900 rounded transition hover:bg-cyan-300 flex items-center gap-2 font-semibold;
+}
+
+.project-btn {
+  @apply px-4 py-2 rounded transition flex items-center gap-2;
+}
+
+.project-btn.outline {
+  @apply border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900;
+}
+
+.project-btn.primary {
+  @apply bg-cyan-400 text-slate-900 hover:bg-cyan-300;
+}
+
+.tech-badge {
+  @apply px-3 py-1 bg-slate-800 text-cyan-400 rounded-full text-sm;
+}
+
+.category-dot {
+  @apply w-2 h-2 rounded-full;
+}
+
+.category-dot.green {
+  @apply bg-green-400;
+}
+
+.category-dot.purple {
+  @apply bg-purple-400;
+}
+
+.learning-badge {
+  @apply px-3 py-2 bg-slate-800 text-cyan-400 rounded-lg text-sm;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideBottom 0.6s ease-in forwards;
+}
+
+/* Teamwork Section Styling */
+#Teamwork {
+  background: rgb(7, 27, 39) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#Teamwork h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+
+#Teamwork span {
+  color: #0ef;
+}
+
+.teamwork-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, auto));
+  gap: 2rem;
+}
+
+.teamwork-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 400px;
+}
+
+.teamwork-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.teamwork-overlay {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  transition: height 0.5s ease;
+}
+
+.teamwork-overlay h5 {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.teamwork-overlay p {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.teamwork-overlay a {
+  color: red;
+  font-size: 1.5rem;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.teamwork-overlay a:hover {
+  background: #0ef;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.teamwork-item:hover img {
+  transform: scale(1.1);
+}
+
+.teamwork-item:hover .teamwork-overlay {
+  height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #Teamwork h1 {
+    font-size: 2.5rem;
+  }
+  
+  .teamwork-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .teamwork-item {
+    height: 300px;
+  }
+}

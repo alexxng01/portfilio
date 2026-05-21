@@ -55,6 +55,7 @@ body {
 
 .h-nav-resp {
   height: 72px;
+ 
 }
 .burger {
   position: absolute;
@@ -184,8 +185,8 @@ body {
 }
 .hero-buttons{
   margin: 20px;
-  display: flex
-;
+  gap: 20px;
+  display: flex;
 }
 .about {
   display: flex;

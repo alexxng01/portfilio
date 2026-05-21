@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,138 +5,235 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>Rahul Kumar Mahato - Portfolio </title>
-    <meta name="description" content="Full-Stack Developer & Designer portfolio showcasing projects and skills">
+    <meta name="descripti            <p cla            <p class="text-gray-400 mb-4">
+              I love working side-by-side with a team — sharing ideas, solving problems, and turning code into
+                something we're proud of. Collaboration makes every project better.
+            </p>
+            <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">Learn More →</a>
+          </div>
+
+          <div class="bg-slate-900 p-8 rounded-lg hover:shadow-2xl hover:shadow-cyan-500/20 transition">
+            <i class="bx bxl-apple text-cyan-400 text-4xl mb-4"></i>
+            <h2 class="text-2xl font-bold text-white mb-3">App Development</h2>gray-400 mb-4">
+              Great code comes from collaboration. I love working with others to solve problems, share ideas, and
+                build clean, innovative solutions. Let's create something extraordinary together.
+            </p>
+            <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">Learn More →</a>
+          </div>
+
+          <div class="bg-slate-900 p-8 rounded-lg hover:shadow-2xl hover:shadow-cyan-500/20 transition">
+            <i class="bx bx-crop text-cyan-400 text-4xl mb-4"></i>
+            <h2 class="text-2xl font-bold text-white mb-3">Web Design</h2>nt="Full-Stack Developer & Designer portfolio showcasing projects and skills">
     <meta name="author" content="Alex Xng">
     <link rel="shortcut icon" href="images/rahul.svg" type="image/x-icon">
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="responsive.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<link rel="stylesheet" href="extra.css">
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+    body {
+      @apply bg-slate-900 text-gray-200;
+      font-family: "popples", sans-serif;
+    }
+    .active {
+      @apply text-cyan-400;
+    }
+    .btn-box {
+      @apply px-4 py-2 bg-cyan-400 text-slate-900 rounded transition hover:bg-cyan-300 flex items-center gap-2 font-semibold;
+    }
+    .project-btn {
+      @apply px-4 py-2 rounded transition flex items-center gap-2;
+    }
+    .project-btn.outline {
+      @apply border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900;
+    }
+    .project-btn.primary {
+      @apply bg-cyan-400 text-slate-900 hover:bg-cyan-300;
+    }
+    .tech-badge {
+      @apply px-3 py-1 bg-slate-800 text-cyan-400 rounded-full text-sm;
+    }
+    .category-dot {
+      @apply w-2 h-2 rounded-full;
+    }
+    .category-dot.green {
+      @apply bg-green-400;
+    }
+    .category-dot.purple {
+      @apply bg-purple-400;
+    }
+    .learning-badge {
+      @apply px-3 py-2 bg-slate-800 text-cyan-400 rounded-lg text-sm;
+    }
+  </style>
 </head>
 
-<body>
-  <section class="header h-nav-resp">
-    <a href="#" class="logo">Portfolio</a>
-    <nav class="navbar v-class-resp">
-      <a href="#Home" style="--i: 1" class="active">Home</a>
-      <a href="#About" style="--i: 2">About</a>
-      <a href="#Portfolio" style="--i: 4">Services</a>
-      <a href="#Services" style="--i: 3">Skill</a>
-      <a href="#contact" style="--i: 5">Contact</a>
+<body class="bg-slate-900 text-gray-200">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full px-10 py-5 bg-slate-950 flex justify-between items-center z-50 shadow-lg">
+    <a href="#" class="text-2xl font-bold text-white opacity-0 animate-pulse">Portfolio</a>
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex gap-8">
+      <a href="#Home" class="text-white hover:text-cyan-400 transition">Home</a>
+      <a href="#About" class="text-white hover:text-cyan-400 transition">About</a>
+      <a href="#Portfolio" class="text-white hover:text-cyan-400 transition">Services</a>
+      <a href="#Services" class="text-white hover:text-cyan-400 transition">Skill</a>
+      <a href="#contact" class="text-white hover:text-cyan-400 transition">Contact</a>
     </nav>
-    <div class="burger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-  </section>
-  <section class="home" id="Home">
-    <div class="home-content">
-      <h3>Hello, It's Me</h3>
-      <h1>Rahul Mahato</h1>
-      <h3>And I'm a <span class="text"></span></h3>
-      <p>
-        I'm a web Designer with extensive experience for over 2 months.<br />experienceis
-        to create and website design, Frontend design ,and backend design.
-      </p>
-      <div class="home-sci">
-        <a href="https://www.facebook.com/share/15iFU9w1yU/?mibextid=LQQJ4d" style="--i: 6"><i
-            class="bx bxl-facebook"></i> </a>
-        <a href="#" style="--i: 7"><i class="bx bxl-instagram"></i></a>
-        <a href="#" style="--i: 8"><i class="bx bxl-whatsapp"></i></a>
-        <a href="#" style="--i: 9"><i class="bx bxl-tiktok"></i></a>
-      </div>
-       <div class="hero-buttons">
-                        <button class="btn-box ">
-                            View My Projects
-                            <i class="fab fa-github"></i>
-                        </button>
-                        <button id="downloadCvBtn"  class="btn-box ">
-                            Download CV
-                            <i class="fas fa-download"></i>
-                        </button>
-                    </div>
-    </div>
-    <div class="img">
-      <img class="round" src="./images/ME.jpeg" />
-    </div>
-  </section>
- <section>
-    <div class="about" id="about">
-      <div class="about-text" id="About">
-        <div class="abo">
-        <h2>About<span>Me</span></h2>
-        <h4>Full Stack Devloper</h4>
+    
+    <!-- Burger Menu Button - Only visible on small screens -->
+    <button class="md:hidden flex flex-col gap-1.5 cursor-pointer z-50" id="burgerBtn" aria-label="Toggle menu">
+      <span class="w-7 h-0.5 bg-white transition-all duration-300"></span>
+      <span class="w-7 h-0.5 bg-white transition-all duration-300"></span>
+      <span class="w-7 h-0.5 bg-white transition-all duration-300"></span>
+    </button>
+  </header>
+
+  <!-- Sidebar Navigation - Mobile -->
+  <div id="sidebar" class="fixed top-0 right-0 h-screen w-64 bg-slate-950 shadow-2xl transform translate-x-full transition-transform duration-300 z-40 md:hidden">
+    <nav class="flex flex-col gap-6 pt-24 px-6">
+      <a href="#Home" class="text-lg text-white hover:text-cyan-400 transition">Home</a>
+      <a href="#About" class="text-lg text-white hover:text-cyan-400 transition">About</a>
+      <a href="#Portfolio" class="text-lg text-white hover:text-cyan-400 transition">Services</a>
+      <a href="#Services" class="text-lg text-white hover:text-cyan-400 transition">Skill</a>
+      <a href="#contact" class="text-lg text-white hover:text-cyan-400 transition">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Home Section -->
+  <section class="relative w-full min-h-screen bg-slate-900 flex items-center pt-24 px-6 md:px-12" id="Home">
+    <div class="flex flex-col-reverse md:flex-row gap-8 max-w-6xl mx-auto w-full">
+      <!-- Home Content -->
+      <div class="flex-1 flex flex-col justify-center">
+        <h3 class="text-2xl md:text-3xl text-gray-300">Hello, It's Me</h3>
+        <h1 class="text-4xl md:text-6xl font-bold text-white mt-2">Rahul Mahato</h1>
+        <h3 class="text-2xl md:text-3xl text-gray-300 mt-2">And I'm a <span class="text cyan-400"></span></h3>
+        <p class="text-gray-400 mt-4 text-base md:text-lg leading-relaxed">
+          I'm a web Designer with extensive experience for over 2 months.<br />Experience is to create and website design, Frontend design, and backend design.
+        </p>
+        
+        <!-- Social Links -->
+        <div class="flex gap-4 mt-6">
+          <a href="https://www.facebook.com/share/15iFU9w1yU/?mibextid=LQQJ4d" class="text-cyan-400 text-2xl hover:text-cyan-300 transition">
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a href="#" class="text-cyan-400 text-2xl hover:text-cyan-300 transition">
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a href="#" class="text-cyan-400 text-2xl hover:text-cyan-300 transition">
+            <i class="bx bxl-whatsapp"></i>
+          </a>
+          <a href="#" class="text-cyan-400 text-2xl hover:text-cyan-300 transition">
+            <i class="bx bxl-tiktok"></i>
+          </a>
         </div>
-        <div class="para">
-          <div class="first">
-                   <p class="about-paragraph">
-                        I'm a Computer Science student at <strong>Techspire College</strong> in Kathmandu, Nepal,
-                        with a deep passion for full-stack development and UI/UX design. I love turning complex
-                        problems into simple, beautiful, and intuitive solutions.
-                    </p>
-
-                    <p class="about-paragraph">
-                        My journey in technology started with curiosity about how things work behind the scenes.
-                        Now, I'm focused on building web applications that not only function well but also
-                        provide exceptional user experiences.
-                    </p>
-
-                    <p class="about-paragraph">
-                        When I'm not coding, you can find me exploring new design trends, contributing to
-                        open-source projects, or learning about emerging technologies in the tech ecosystem.
-                    </p>
+        
+        <!-- Buttons -->
+        <div class="flex gap-4 mt-8 flex-wrap">
+          <button class="btn-box">
+            View My Projects
+            <i class="fab fa-github"></i>
+          </button>
+          <button id="downloadCvBtn" class="btn-box">
+            Download CV
+            <i class="fas fa-download"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Image -->
+      <div class="flex-1 flex justify-center items-center">
+        <img class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-cyan-400 shadow-lg" src="./images/ME.jpeg" alt="Rahul Mahato" />
+      </div>
+    </div>
+  </section>
+ <!-- About Section -->
+  <section class="w-full bg-slate-900 py-20 px-6 md:px-12" id="about">
+    <div class="max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white">About<span class="text-cyan-400">Me</span></h2>
+        <h4 class="text-xl text-cyan-400 mt-2">Full Stack Developer</h4>
+      </div>
+      
+      <div class="flex flex-col md:flex-row gap-12">
+        <!-- Left Column - Text -->
+        <div class="flex-1">
+          <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+            I'm a Computer Science student at <strong>Techspire College</strong> in Kathmandu, Nepal,
+            with a deep passion for full-stack development and UI/UX design. I love turning complex
+            problems into simple, beautiful, and intuitive solutions.
+          </p>
+          <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-4">
+            My journey in technology started with curiosity about how things work behind the scenes.
+            Now, I'm focused on building web applications that not only function well but also
+            provide exceptional user experiences.
+          </p>
+          <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-6">
+            When I'm not coding, you can find me exploring new design trends, contributing to
+            open-source projects, or learning about emerging technologies in the tech ecosystem.
+          </p>
+        </div>
+        
+        <!-- Right Column - Cards -->
+        <div class="flex-1 flex flex-col gap-4">
+          <div class="bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-blue-900 rounded-lg text-blue-400 text-2xl">
+                <i class="fas fa-graduation-cap"></i>
               </div>
-              <div class="second">
-                <div class="about-sec animate-slide-up">
-                    <div class="about-seco">
-                        <div class="card-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Education</h3>
-                            <p class="card-text">Computer Science Student at Techspire College, Kathmandu</p>
-                        </div>
-                    </div>
-
-                    <div class="about-seco">
-                        <div class="card-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Development Focus</h3>
-                            <p class="card-text">Full-stack web development with modern technologies and best practices
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="about-seco">
-                        <div class="card-icon">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="card-title">Design Philosophy</h3>
-                            <p class="card-text">Creating intuitive and beautiful user interfaces with Figma and modern
-                                design principles</p>
-                        </div>
-                    </div>
-                </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Education</h3>
+                <p class="text-gray-400">Computer Science Student at Techspire College, Kathmandu</p>
               </div>
             </div>
-        <a href="#" class="btn-box">More About Me </a>
+          </div>
+          
+          <div class="bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-green-900 rounded-lg text-green-400 text-2xl">
+                <i class="fas fa-code"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Development Focus</h3>
+                <p class="text-gray-400">Full-stack web development with modern technologies and best practices</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-slate-800 p-6 rounded-lg hover:bg-slate-700 transition">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-purple-900 rounded-lg text-purple-400 text-2xl">
+                <i class="fas fa-palette"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-white">Design Philosophy</h3>
+                <p class="text-gray-400">Creating intuitive and beautiful user interfaces with Figma and modern design principles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="#" class="btn-box inline-block">More About Me</a>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="services" id="Portfolio">
-      <div class="container">
-        <h1 class="sub-title">My <span>Services</span></h1>
-        <div class="services-list">
-          <div>
-            <i class="bx bx-code" style="color: #08f6d9"></i>
-            <h2>UI/UX Design</h2>
+  <!-- Services Section -->
+  <section class="w-full bg-slate-800 py-20 px-6 md:px-12" id="Portfolio">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold text-center mb-16">My <span class="text-cyan-400">Services</span></h1>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-900 p-8 rounded-lg hover:shadow-2xl hover:shadow-cyan-500/20 transition">
+          <i class="bx bx-code text-cyan-400 text-4xl mb-4"></i>
+          <h2 class="text-2xl font-bold text-white mb-3">UI/UX Design</h2>
             <p>
               Great code comes from collaboration. I love working with others to solve problems, share ideas, and
                 build clean, innovative solutions. Let’s create something extraordinary together.
@@ -156,11 +252,11 @@
           <div>
             <i class="bx bxl-apple" style="color: #08f6d9"></i>
             <h2>UI/UX Design</h2>
-            <p>
+            <p class="text-gray-400 mb-4">
              I enjoy sitting with a team, turning ideas into designs, and watching them come alive on the screen.
                 Creating together makes every project more exciting.
             </p>
-            <a href="#" class="read">Learn More</a>
+            <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">Learn More →</a>
           </div>
         </div>
       </div>
