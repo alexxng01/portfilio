@@ -1,37 +1,40 @@
 name: Build and Deploy
-
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'docs/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-      
+
       - name: Install dependencies
-        run: |
-          npm install
-          cd frontend && npm install
-      
+        run: npm install
+
       - name: Build
-        run: cd frontend && npm run build
-      
-      - name: Copy public files to build
+        run: npm run build
+
+      - name: Copy public files to docs
         run: |
-          cp frontend/public/404.html frontend/build/
-          cp frontend/public/robots.txt frontend/build/
-          cp frontend/public/sitemap.xml frontend/build/
-      
-      - name: Deploy to gh-pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: frontend/build
-          clean: true
+          cp public/404.html docs/
+          cp public/robots.txt docs/
+          cp public/sitemap.xml docs/
+          echo "www.rahulmahato.com.np" > docs/CNAME
+
+      - name: Commit build to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs -f
+          git diff --staged --quiet || git commit -m "chore: auto-build for Pages [skip ci]"
+          git push
