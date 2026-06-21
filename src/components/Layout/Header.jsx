@@ -8,14 +8,12 @@ const Header = () => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section');
       let current = '';
-
       sections.forEach((section) => {
         const sectionTop = section.offsetTop - 120;
-        if (scrollY >= sectionTop) {
+        if (window.scrollY >= sectionTop) {
           current = section.getAttribute('id');
         }
       });
-
       setActiveLink(current);
     };
 
@@ -34,7 +32,14 @@ const Header = () => {
 
   return (
     <section className="header">
-      <a href="#" className="logo">
+      <a
+        href="#"
+        className="logo"
+        onClick={(e) => {
+          e.preventDefault();
+          scrollToSection('home');
+        }}
+      >
         Portfolio
       </a>
       <nav className={`navbar ${isActive ? 'active' : ''}`}>
@@ -108,7 +113,6 @@ const Header = () => {
         >
           Contact
         </a>
-       
       </nav>
       <div className={`burger ${isActive ? 'active' : ''}`} onClick={toggleMenu}>
         <div className="line"></div>
