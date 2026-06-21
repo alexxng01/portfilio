@@ -1,5 +1,5 @@
 import React from 'react';
-import { createHashRouter } from 'react-router-dom'; // Changed from createBrowserRouter
+import { createHashRouter } from 'react-router-dom'; // ← HASH ROUTER
 import HomePage from './pages/HomePage';
 import AdminPage from './pages/AdminPage';
 import Login from './components/Auth/Login';
@@ -88,8 +88,7 @@ export const routes = [
   },
 ];
 
-// Create router instance with HashRouter
-// This enables GitHub Pages compatibility
+// ← HASH ROUTER (NOT BrowserRouter)
 export const router = createHashRouter(routes);
 
 // Navigation helper
